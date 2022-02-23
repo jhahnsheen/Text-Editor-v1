@@ -4,7 +4,7 @@ The J.A.T.E. Text Editor is a minimalist-style text editor progressive web app (
 
 ## Installation
 
-the J.A.T.E. Text Editor download page is hosted on Heroku at [this link](filler text). Simply go to the page and click the install button to access the J.A.T.E. Text Editor remotely on your personal device.
+the J.A.T.E. Text Editor download page is hosted on Heroku at [this link](https://bksb-text-editor-v1.herokuapp.com/). Simply go to the page and click the install button to access the J.A.T.E. Text Editor remotely on your personal device.
 
 ## Usage
 
