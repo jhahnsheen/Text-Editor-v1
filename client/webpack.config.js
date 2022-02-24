@@ -23,6 +23,11 @@ module.exports = () => {
         template: './index.html',
         title: 'J.A.T.E. Text Editor'
       }),
+       // Add InjectManifest
+      new InjectManifest({
+        swSrc: './src-sw.js',
+        swDest: 'src-sw.js',
+      }),
       // Add WebpackPwaManifest
       new WebpackPwaManifest({
         fingerprints: false,
@@ -41,11 +46,6 @@ module.exports = () => {
             destination: path.join('assets', 'icons'),
           },
         ],
-      }),
-      // Add InjectManifest
-      new InjectManifest({
-        swSrc: './src-sw.js',
-        swDest: 'src-sw,js',
       }),
     ],
 
