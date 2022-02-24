@@ -17,20 +17,20 @@ export const putDb = async (content) => {
   const callDb = await openDB('jate', 1);
   const newTrans = callDb.transaction('jate', 'readwrite');
   const desStore = newTrans.objectStore('jate');
-  const addRequest = desStore.add({
-    content: content,
+  const putRequest = desStore.put({
+    content: content
   });
-  const finish = await addRequest;
+  const finish = await putRequest;
   console.log(finish);
 };
 
 // TODO: Add logic for a method that gets all the content from the database
 export const getDb = async () => {
   const callDb = await openDB('jate', 1);
-  const newTrans = callDb.transaction('jate', 'readwrite');
+  const newTrans = callDb.transaction('jate', 'readonly');
   const desStore = newTrans.objectStore('jate');
   const getRequest = desStore.getAll();
-  const finish = await getRequest;
+  const finish = getRequest.content;
   return finish;
 };
 
